@@ -1,0 +1,16 @@
+C:\Users\SURFACE\Desktop\Project\Pharmacy-Management-\Pharmacy_Management_App\bin\Debug\Pharmacy.accdb
+C:\Users\SURFACE\Desktop\Project\Pharmacy-Management-\Pharmacy_Management_App\bin\Debug\Pharmacy_Management_App.exe.config
+C:\Users\SURFACE\Desktop\Project\Pharmacy-Management-\Pharmacy_Management_App\bin\Debug\Pharmacy_Management_App.exe
+C:\Users\SURFACE\Desktop\Project\Pharmacy-Management-\Pharmacy_Management_App\bin\Debug\Pharmacy_Management_App.pdb
+C:\Users\SURFACE\Desktop\Project\Pharmacy-Management-\Pharmacy_Management_App\obj\Debug\Pharmacy_Management_App.csprojAssemblyReference.cache
+C:\Users\SURFACE\Desktop\Project\Pharmacy-Management-\Pharmacy_Management_App\obj\Debug\Pharmacy_Management_App.Doctors.resources
+C:\Users\SURFACE\Desktop\Project\Pharmacy-Management-\Pharmacy_Management_App\obj\Debug\Pharmacy_Management_App.GP_Appointment.resources
+C:\Users\SURFACE\Desktop\Project\Pharmacy-Management-\Pharmacy_Management_App\obj\Debug\Pharmacy_Management_App.Office.resources
+C:\Users\SURFACE\Desktop\Project\Pharmacy-Management-\Pharmacy_Management_App\obj\Debug\Pharmacy_Management_App.Patient.resources
+C:\Users\SURFACE\Desktop\Project\Pharmacy-Management-\Pharmacy_Management_App\obj\Debug\Pharmacy_Management_App.Payment.resources
+C:\Users\SURFACE\Desktop\Project\Pharmacy-Management-\Pharmacy_Management_App\obj\Debug\Pharmacy_Management_App.Pharmacy.resources
+C:\Users\SURFACE\Desktop\Project\Pharmacy-Management-\Pharmacy_Management_App\obj\Debug\Pharmacy_Management_App.Properties.Resources.resources
+C:\Users\SURFACE\Desktop\Project\Pharmacy-Management-\Pharmacy_Management_App\obj\Debug\Pharmacy_Management_App.csproj.GenerateResource.cache
+C:\Users\SURFACE\Desktop\Project\Pharmacy-Management-\Pharmacy_Management_App\obj\Debug\Pharmacy_Management_App.exe
+C:\Users\SURFACE\Desktop\Project\Pharmacy-Management-\Pharmacy_Management_App\obj\Debug\Pharmacy_Management_App.pdb
+C:\Users\SURFACE\Desktop\Project\Pharmacy-Management-\Pharmacy_Management_App\obj\Debug\Pharmacy_Management_App.Home.resources
