@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Patient));
             System.Windows.Forms.Label nI_NumberLabel;
             System.Windows.Forms.Label firstnameLabel;
             System.Windows.Forms.Label surnameLabel;
@@ -47,22 +46,23 @@
             System.Windows.Forms.Label patient_NHS_NumberLabel;
             System.Windows.Forms.Label eMIS_NumberLabel;
             System.Windows.Forms.Label gP_Appointment_RefLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Patient));
             this.pharmacyDataSet = new Pharmacy_Management_App.PharmacyDataSet();
             this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.patientTableAdapter = new Pharmacy_Management_App.PharmacyDataSetTableAdapters.PatientTableAdapter();
             this.tableAdapterManager = new Pharmacy_Management_App.PharmacyDataSetTableAdapters.TableAdapterManager();
             this.patientBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.patientBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.nI_NumberTextBox = new System.Windows.Forms.TextBox();
             this.firstnameTextBox = new System.Windows.Forms.TextBox();
@@ -81,6 +81,25 @@
             this.patient_NHS_NumberTextBox = new System.Windows.Forms.TextBox();
             this.eMIS_NumberTextBox = new System.Windows.Forms.TextBox();
             this.gP_Appointment_RefTextBox = new System.Windows.Forms.TextBox();
+            this.gP_AppointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gP_AppointmentTableAdapter = new Pharmacy_Management_App.PharmacyDataSetTableAdapters.GP_AppointmentTableAdapter();
+            this.gP_AppointmentDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.bntExitPat = new System.Windows.Forms.Button();
+            this.bntClosePat = new System.Windows.Forms.Button();
+            this.bntSavePat = new System.Windows.Forms.Button();
+            this.bntPreviousPat = new System.Windows.Forms.Button();
+            this.bntNextPat = new System.Windows.Forms.Button();
+            this.bntDeletePat = new System.Windows.Forms.Button();
+            this.bntAddPat = new System.Windows.Forms.Button();
             nI_NumberLabel = new System.Windows.Forms.Label();
             firstnameLabel = new System.Windows.Forms.Label();
             surnameLabel = new System.Windows.Forms.Label();
@@ -102,7 +121,180 @@
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingNavigator)).BeginInit();
             this.patientBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gP_AppointmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gP_AppointmentDataGridView)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // nI_NumberLabel
+            // 
+            nI_NumberLabel.AutoSize = true;
+            nI_NumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nI_NumberLabel.Location = new System.Drawing.Point(43, 89);
+            nI_NumberLabel.Name = "nI_NumberLabel";
+            nI_NumberLabel.Size = new System.Drawing.Size(167, 32);
+            nI_NumberLabel.TabIndex = 1;
+            nI_NumberLabel.Text = "NI Number:";
+            // 
+            // firstnameLabel
+            // 
+            firstnameLabel.AutoSize = true;
+            firstnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            firstnameLabel.Location = new System.Drawing.Point(43, 159);
+            firstnameLabel.Name = "firstnameLabel";
+            firstnameLabel.Size = new System.Drawing.Size(159, 32);
+            firstnameLabel.TabIndex = 3;
+            firstnameLabel.Text = "Firstname:";
+            // 
+            // surnameLabel
+            // 
+            surnameLabel.AutoSize = true;
+            surnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            surnameLabel.Location = new System.Drawing.Point(43, 228);
+            surnameLabel.Name = "surnameLabel";
+            surnameLabel.Size = new System.Drawing.Size(146, 32);
+            surnameLabel.TabIndex = 5;
+            surnameLabel.Text = "Surname:";
+            // 
+            // date_of_BirthLabel
+            // 
+            date_of_BirthLabel.AutoSize = true;
+            date_of_BirthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            date_of_BirthLabel.Location = new System.Drawing.Point(43, 299);
+            date_of_BirthLabel.Name = "date_of_BirthLabel";
+            date_of_BirthLabel.Size = new System.Drawing.Size(194, 32);
+            date_of_BirthLabel.TabIndex = 7;
+            date_of_BirthLabel.Text = "Date of Birth:";
+            // 
+            // billing_NameLabel
+            // 
+            billing_NameLabel.AutoSize = true;
+            billing_NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            billing_NameLabel.Location = new System.Drawing.Point(43, 367);
+            billing_NameLabel.Name = "billing_NameLabel";
+            billing_NameLabel.Size = new System.Drawing.Size(197, 32);
+            billing_NameLabel.TabIndex = 9;
+            billing_NameLabel.Text = "Billing Name:";
+            // 
+            // addressLabel
+            // 
+            addressLabel.AutoSize = true;
+            addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            addressLabel.Location = new System.Drawing.Point(43, 440);
+            addressLabel.Name = "addressLabel";
+            addressLabel.Size = new System.Drawing.Size(135, 32);
+            addressLabel.TabIndex = 11;
+            addressLabel.Text = "Address:";
+            // 
+            // post_CodeLabel
+            // 
+            post_CodeLabel.AutoSize = true;
+            post_CodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            post_CodeLabel.Location = new System.Drawing.Point(43, 506);
+            post_CodeLabel.Name = "post_CodeLabel";
+            post_CodeLabel.Size = new System.Drawing.Size(165, 32);
+            post_CodeLabel.TabIndex = 13;
+            post_CodeLabel.Text = "Post Code:";
+            // 
+            // cityLabel
+            // 
+            cityLabel.AutoSize = true;
+            cityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cityLabel.Location = new System.Drawing.Point(43, 571);
+            cityLabel.Name = "cityLabel";
+            cityLabel.Size = new System.Drawing.Size(77, 32);
+            cityLabel.TabIndex = 15;
+            cityLabel.Text = "City:";
+            // 
+            // countryLabel
+            // 
+            countryLabel.AutoSize = true;
+            countryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            countryLabel.Location = new System.Drawing.Point(649, 88);
+            countryLabel.Name = "countryLabel";
+            countryLabel.Size = new System.Drawing.Size(130, 32);
+            countryLabel.TabIndex = 17;
+            countryLabel.Text = "Country:";
+            // 
+            // home_PhoneLabel
+            // 
+            home_PhoneLabel.AutoSize = true;
+            home_PhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            home_PhoneLabel.Location = new System.Drawing.Point(649, 156);
+            home_PhoneLabel.Name = "home_PhoneLabel";
+            home_PhoneLabel.Size = new System.Drawing.Size(199, 32);
+            home_PhoneLabel.TabIndex = 19;
+            home_PhoneLabel.Text = "Home Phone:";
+            // 
+            // mobile_PhoneLabel
+            // 
+            mobile_PhoneLabel.AutoSize = true;
+            mobile_PhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            mobile_PhoneLabel.Location = new System.Drawing.Point(649, 228);
+            mobile_PhoneLabel.Name = "mobile_PhoneLabel";
+            mobile_PhoneLabel.Size = new System.Drawing.Size(211, 32);
+            mobile_PhoneLabel.TabIndex = 21;
+            mobile_PhoneLabel.Text = "Mobile Phone:";
+            // 
+            // fax_PhoneLabel
+            // 
+            fax_PhoneLabel.AutoSize = true;
+            fax_PhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fax_PhoneLabel.Location = new System.Drawing.Point(649, 299);
+            fax_PhoneLabel.Name = "fax_PhoneLabel";
+            fax_PhoneLabel.Size = new System.Drawing.Size(170, 32);
+            fax_PhoneLabel.TabIndex = 23;
+            fax_PhoneLabel.Text = "Fax Phone:";
+            // 
+            // menoLabel
+            // 
+            menoLabel.AutoSize = true;
+            menoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            menoLabel.Location = new System.Drawing.Point(649, 367);
+            menoLabel.Name = "menoLabel";
+            menoLabel.Size = new System.Drawing.Size(99, 32);
+            menoLabel.TabIndex = 25;
+            menoLabel.Text = "Meno:";
+            // 
+            // patient__IDLabel
+            // 
+            patient__IDLabel.AutoSize = true;
+            patient__IDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            patient__IDLabel.Location = new System.Drawing.Point(649, 506);
+            patient__IDLabel.Name = "patient__IDLabel";
+            patient__IDLabel.Size = new System.Drawing.Size(166, 32);
+            patient__IDLabel.TabIndex = 27;
+            patient__IDLabel.Text = "Patient  ID:";
+            // 
+            // patient_NHS_NumberLabel
+            // 
+            patient_NHS_NumberLabel.AutoSize = true;
+            patient_NHS_NumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            patient_NHS_NumberLabel.Location = new System.Drawing.Point(649, 440);
+            patient_NHS_NumberLabel.Name = "patient_NHS_NumberLabel";
+            patient_NHS_NumberLabel.Size = new System.Drawing.Size(305, 32);
+            patient_NHS_NumberLabel.TabIndex = 29;
+            patient_NHS_NumberLabel.Text = "Patient NHS Number:";
+            // 
+            // eMIS_NumberLabel
+            // 
+            eMIS_NumberLabel.AutoSize = true;
+            eMIS_NumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            eMIS_NumberLabel.Location = new System.Drawing.Point(649, 571);
+            eMIS_NumberLabel.Name = "eMIS_NumberLabel";
+            eMIS_NumberLabel.Size = new System.Drawing.Size(210, 32);
+            eMIS_NumberLabel.TabIndex = 31;
+            eMIS_NumberLabel.Text = "EMIS Number:";
+            // 
+            // gP_Appointment_RefLabel
+            // 
+            gP_Appointment_RefLabel.AutoSize = true;
+            gP_Appointment_RefLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            gP_Appointment_RefLabel.Location = new System.Drawing.Point(649, 640);
+            gP_Appointment_RefLabel.Name = "gP_Appointment_RefLabel";
+            gP_Appointment_RefLabel.Size = new System.Drawing.Size(302, 32);
+            gP_Appointment_RefLabel.TabIndex = 33;
+            gP_Appointment_RefLabel.Text = "GP Appointment Ref:";
             // 
             // pharmacyDataSet
             // 
@@ -155,9 +347,34 @@
             this.patientBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.patientBindingNavigator.Name = "patientBindingNavigator";
             this.patientBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.patientBindingNavigator.Size = new System.Drawing.Size(800, 35);
+            this.patientBindingNavigator.Size = new System.Drawing.Size(1386, 33);
             this.patientBindingNavigator.TabIndex = 0;
             this.patientBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -165,7 +382,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 20);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -174,34 +391,28 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 20);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 25);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -223,330 +434,372 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 30);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
             // 
             // patientBindingNavigatorSaveItem
             // 
             this.patientBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.patientBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("patientBindingNavigatorSaveItem.Image")));
             this.patientBindingNavigatorSaveItem.Name = "patientBindingNavigatorSaveItem";
-            this.patientBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.patientBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
             this.patientBindingNavigatorSaveItem.Text = "Save Data";
             this.patientBindingNavigatorSaveItem.Click += new System.EventHandler(this.patientBindingNavigatorSaveItem_Click);
-            // 
-            // nI_NumberLabel
-            // 
-            nI_NumberLabel.AutoSize = true;
-            nI_NumberLabel.Location = new System.Drawing.Point(125, 79);
-            nI_NumberLabel.Name = "nI_NumberLabel";
-            nI_NumberLabel.Size = new System.Drawing.Size(89, 20);
-            nI_NumberLabel.TabIndex = 1;
-            nI_NumberLabel.Text = "NI Number:";
             // 
             // nI_NumberTextBox
             // 
             this.nI_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "NI Number", true));
-            this.nI_NumberTextBox.Location = new System.Drawing.Point(292, 76);
+            this.nI_NumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nI_NumberTextBox.Location = new System.Drawing.Point(304, 86);
             this.nI_NumberTextBox.Name = "nI_NumberTextBox";
-            this.nI_NumberTextBox.Size = new System.Drawing.Size(100, 26);
+            this.nI_NumberTextBox.Size = new System.Drawing.Size(292, 39);
             this.nI_NumberTextBox.TabIndex = 2;
-            // 
-            // firstnameLabel
-            // 
-            firstnameLabel.AutoSize = true;
-            firstnameLabel.Location = new System.Drawing.Point(125, 111);
-            firstnameLabel.Name = "firstnameLabel";
-            firstnameLabel.Size = new System.Drawing.Size(84, 20);
-            firstnameLabel.TabIndex = 3;
-            firstnameLabel.Text = "Firstname:";
             // 
             // firstnameTextBox
             // 
             this.firstnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "Firstname", true));
-            this.firstnameTextBox.Location = new System.Drawing.Point(292, 108);
+            this.firstnameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstnameTextBox.Location = new System.Drawing.Point(304, 156);
             this.firstnameTextBox.Name = "firstnameTextBox";
-            this.firstnameTextBox.Size = new System.Drawing.Size(100, 26);
+            this.firstnameTextBox.Size = new System.Drawing.Size(292, 39);
             this.firstnameTextBox.TabIndex = 4;
-            // 
-            // surnameLabel
-            // 
-            surnameLabel.AutoSize = true;
-            surnameLabel.Location = new System.Drawing.Point(125, 143);
-            surnameLabel.Name = "surnameLabel";
-            surnameLabel.Size = new System.Drawing.Size(78, 20);
-            surnameLabel.TabIndex = 5;
-            surnameLabel.Text = "Surname:";
             // 
             // surnameTextBox
             // 
             this.surnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "Surname", true));
-            this.surnameTextBox.Location = new System.Drawing.Point(292, 140);
+            this.surnameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.surnameTextBox.Location = new System.Drawing.Point(304, 225);
             this.surnameTextBox.Name = "surnameTextBox";
-            this.surnameTextBox.Size = new System.Drawing.Size(100, 26);
+            this.surnameTextBox.Size = new System.Drawing.Size(292, 39);
             this.surnameTextBox.TabIndex = 6;
-            // 
-            // date_of_BirthLabel
-            // 
-            date_of_BirthLabel.AutoSize = true;
-            date_of_BirthLabel.Location = new System.Drawing.Point(125, 175);
-            date_of_BirthLabel.Name = "date_of_BirthLabel";
-            date_of_BirthLabel.Size = new System.Drawing.Size(103, 20);
-            date_of_BirthLabel.TabIndex = 7;
-            date_of_BirthLabel.Text = "Date of Birth:";
             // 
             // date_of_BirthTextBox
             // 
             this.date_of_BirthTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "Date of Birth", true));
-            this.date_of_BirthTextBox.Location = new System.Drawing.Point(292, 172);
+            this.date_of_BirthTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_of_BirthTextBox.Location = new System.Drawing.Point(304, 296);
             this.date_of_BirthTextBox.Name = "date_of_BirthTextBox";
-            this.date_of_BirthTextBox.Size = new System.Drawing.Size(100, 26);
+            this.date_of_BirthTextBox.Size = new System.Drawing.Size(292, 39);
             this.date_of_BirthTextBox.TabIndex = 8;
-            // 
-            // billing_NameLabel
-            // 
-            billing_NameLabel.AutoSize = true;
-            billing_NameLabel.Location = new System.Drawing.Point(125, 207);
-            billing_NameLabel.Name = "billing_NameLabel";
-            billing_NameLabel.Size = new System.Drawing.Size(100, 20);
-            billing_NameLabel.TabIndex = 9;
-            billing_NameLabel.Text = "Billing Name:";
             // 
             // billing_NameTextBox
             // 
             this.billing_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "Billing Name", true));
-            this.billing_NameTextBox.Location = new System.Drawing.Point(292, 204);
+            this.billing_NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billing_NameTextBox.Location = new System.Drawing.Point(304, 364);
             this.billing_NameTextBox.Name = "billing_NameTextBox";
-            this.billing_NameTextBox.Size = new System.Drawing.Size(100, 26);
+            this.billing_NameTextBox.Size = new System.Drawing.Size(292, 39);
             this.billing_NameTextBox.TabIndex = 10;
-            // 
-            // addressLabel
-            // 
-            addressLabel.AutoSize = true;
-            addressLabel.Location = new System.Drawing.Point(125, 239);
-            addressLabel.Name = "addressLabel";
-            addressLabel.Size = new System.Drawing.Size(72, 20);
-            addressLabel.TabIndex = 11;
-            addressLabel.Text = "Address:";
             // 
             // addressTextBox
             // 
             this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "Address", true));
-            this.addressTextBox.Location = new System.Drawing.Point(292, 236);
+            this.addressTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressTextBox.Location = new System.Drawing.Point(304, 437);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(100, 26);
+            this.addressTextBox.Size = new System.Drawing.Size(292, 39);
             this.addressTextBox.TabIndex = 12;
-            // 
-            // post_CodeLabel
-            // 
-            post_CodeLabel.AutoSize = true;
-            post_CodeLabel.Location = new System.Drawing.Point(125, 271);
-            post_CodeLabel.Name = "post_CodeLabel";
-            post_CodeLabel.Size = new System.Drawing.Size(87, 20);
-            post_CodeLabel.TabIndex = 13;
-            post_CodeLabel.Text = "Post Code:";
             // 
             // post_CodeTextBox
             // 
             this.post_CodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "Post Code", true));
-            this.post_CodeTextBox.Location = new System.Drawing.Point(292, 268);
+            this.post_CodeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.post_CodeTextBox.Location = new System.Drawing.Point(304, 503);
             this.post_CodeTextBox.Name = "post_CodeTextBox";
-            this.post_CodeTextBox.Size = new System.Drawing.Size(100, 26);
+            this.post_CodeTextBox.Size = new System.Drawing.Size(292, 39);
             this.post_CodeTextBox.TabIndex = 14;
-            // 
-            // cityLabel
-            // 
-            cityLabel.AutoSize = true;
-            cityLabel.Location = new System.Drawing.Point(125, 303);
-            cityLabel.Name = "cityLabel";
-            cityLabel.Size = new System.Drawing.Size(39, 20);
-            cityLabel.TabIndex = 15;
-            cityLabel.Text = "City:";
             // 
             // cityTextBox
             // 
             this.cityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "City", true));
-            this.cityTextBox.Location = new System.Drawing.Point(292, 300);
+            this.cityTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cityTextBox.Location = new System.Drawing.Point(304, 568);
             this.cityTextBox.Name = "cityTextBox";
-            this.cityTextBox.Size = new System.Drawing.Size(100, 26);
+            this.cityTextBox.Size = new System.Drawing.Size(292, 39);
             this.cityTextBox.TabIndex = 16;
-            // 
-            // countryLabel
-            // 
-            countryLabel.AutoSize = true;
-            countryLabel.Location = new System.Drawing.Point(125, 335);
-            countryLabel.Name = "countryLabel";
-            countryLabel.Size = new System.Drawing.Size(68, 20);
-            countryLabel.TabIndex = 17;
-            countryLabel.Text = "Country:";
             // 
             // countryTextBox
             // 
             this.countryTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "Country", true));
-            this.countryTextBox.Location = new System.Drawing.Point(292, 332);
+            this.countryTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countryTextBox.Location = new System.Drawing.Point(1047, 85);
             this.countryTextBox.Name = "countryTextBox";
-            this.countryTextBox.Size = new System.Drawing.Size(100, 26);
+            this.countryTextBox.Size = new System.Drawing.Size(292, 39);
             this.countryTextBox.TabIndex = 18;
-            // 
-            // home_PhoneLabel
-            // 
-            home_PhoneLabel.AutoSize = true;
-            home_PhoneLabel.Location = new System.Drawing.Point(125, 367);
-            home_PhoneLabel.Name = "home_PhoneLabel";
-            home_PhoneLabel.Size = new System.Drawing.Size(106, 20);
-            home_PhoneLabel.TabIndex = 19;
-            home_PhoneLabel.Text = "Home Phone:";
             // 
             // home_PhoneTextBox
             // 
             this.home_PhoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "Home Phone", true));
-            this.home_PhoneTextBox.Location = new System.Drawing.Point(292, 364);
+            this.home_PhoneTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.home_PhoneTextBox.Location = new System.Drawing.Point(1047, 156);
             this.home_PhoneTextBox.Name = "home_PhoneTextBox";
-            this.home_PhoneTextBox.Size = new System.Drawing.Size(100, 26);
+            this.home_PhoneTextBox.Size = new System.Drawing.Size(292, 39);
             this.home_PhoneTextBox.TabIndex = 20;
-            // 
-            // mobile_PhoneLabel
-            // 
-            mobile_PhoneLabel.AutoSize = true;
-            mobile_PhoneLabel.Location = new System.Drawing.Point(125, 399);
-            mobile_PhoneLabel.Name = "mobile_PhoneLabel";
-            mobile_PhoneLabel.Size = new System.Drawing.Size(109, 20);
-            mobile_PhoneLabel.TabIndex = 21;
-            mobile_PhoneLabel.Text = "Mobile Phone:";
             // 
             // mobile_PhoneTextBox
             // 
             this.mobile_PhoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "Mobile Phone", true));
-            this.mobile_PhoneTextBox.Location = new System.Drawing.Point(292, 396);
+            this.mobile_PhoneTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mobile_PhoneTextBox.Location = new System.Drawing.Point(1047, 225);
             this.mobile_PhoneTextBox.Name = "mobile_PhoneTextBox";
-            this.mobile_PhoneTextBox.Size = new System.Drawing.Size(100, 26);
+            this.mobile_PhoneTextBox.Size = new System.Drawing.Size(292, 39);
             this.mobile_PhoneTextBox.TabIndex = 22;
-            // 
-            // fax_PhoneLabel
-            // 
-            fax_PhoneLabel.AutoSize = true;
-            fax_PhoneLabel.Location = new System.Drawing.Point(125, 431);
-            fax_PhoneLabel.Name = "fax_PhoneLabel";
-            fax_PhoneLabel.Size = new System.Drawing.Size(89, 20);
-            fax_PhoneLabel.TabIndex = 23;
-            fax_PhoneLabel.Text = "Fax Phone:";
             // 
             // fax_PhoneTextBox
             // 
             this.fax_PhoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "Fax Phone", true));
-            this.fax_PhoneTextBox.Location = new System.Drawing.Point(292, 428);
+            this.fax_PhoneTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fax_PhoneTextBox.Location = new System.Drawing.Point(1047, 296);
             this.fax_PhoneTextBox.Name = "fax_PhoneTextBox";
-            this.fax_PhoneTextBox.Size = new System.Drawing.Size(100, 26);
+            this.fax_PhoneTextBox.Size = new System.Drawing.Size(292, 39);
             this.fax_PhoneTextBox.TabIndex = 24;
-            // 
-            // menoLabel
-            // 
-            menoLabel.AutoSize = true;
-            menoLabel.Location = new System.Drawing.Point(125, 463);
-            menoLabel.Name = "menoLabel";
-            menoLabel.Size = new System.Drawing.Size(53, 20);
-            menoLabel.TabIndex = 25;
-            menoLabel.Text = "Meno:";
             // 
             // menoTextBox
             // 
             this.menoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "Meno", true));
-            this.menoTextBox.Location = new System.Drawing.Point(292, 460);
+            this.menoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menoTextBox.Location = new System.Drawing.Point(1047, 364);
             this.menoTextBox.Name = "menoTextBox";
-            this.menoTextBox.Size = new System.Drawing.Size(100, 26);
+            this.menoTextBox.Size = new System.Drawing.Size(292, 39);
             this.menoTextBox.TabIndex = 26;
-            // 
-            // patient__IDLabel
-            // 
-            patient__IDLabel.AutoSize = true;
-            patient__IDLabel.Location = new System.Drawing.Point(125, 495);
-            patient__IDLabel.Name = "patient__IDLabel";
-            patient__IDLabel.Size = new System.Drawing.Size(88, 20);
-            patient__IDLabel.TabIndex = 27;
-            patient__IDLabel.Text = "Patient  ID:";
             // 
             // patient__IDTextBox
             // 
             this.patient__IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "Patient  ID", true));
-            this.patient__IDTextBox.Location = new System.Drawing.Point(292, 492);
+            this.patient__IDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patient__IDTextBox.Location = new System.Drawing.Point(1047, 437);
             this.patient__IDTextBox.Name = "patient__IDTextBox";
-            this.patient__IDTextBox.Size = new System.Drawing.Size(100, 26);
+            this.patient__IDTextBox.Size = new System.Drawing.Size(292, 39);
             this.patient__IDTextBox.TabIndex = 28;
-            // 
-            // patient_NHS_NumberLabel
-            // 
-            patient_NHS_NumberLabel.AutoSize = true;
-            patient_NHS_NumberLabel.Location = new System.Drawing.Point(125, 527);
-            patient_NHS_NumberLabel.Name = "patient_NHS_NumberLabel";
-            patient_NHS_NumberLabel.Size = new System.Drawing.Size(161, 20);
-            patient_NHS_NumberLabel.TabIndex = 29;
-            patient_NHS_NumberLabel.Text = "Patient NHS Number:";
             // 
             // patient_NHS_NumberTextBox
             // 
             this.patient_NHS_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "Patient NHS Number", true));
-            this.patient_NHS_NumberTextBox.Location = new System.Drawing.Point(292, 524);
+            this.patient_NHS_NumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patient_NHS_NumberTextBox.Location = new System.Drawing.Point(1047, 503);
             this.patient_NHS_NumberTextBox.Name = "patient_NHS_NumberTextBox";
-            this.patient_NHS_NumberTextBox.Size = new System.Drawing.Size(100, 26);
+            this.patient_NHS_NumberTextBox.Size = new System.Drawing.Size(292, 39);
             this.patient_NHS_NumberTextBox.TabIndex = 30;
-            // 
-            // eMIS_NumberLabel
-            // 
-            eMIS_NumberLabel.AutoSize = true;
-            eMIS_NumberLabel.Location = new System.Drawing.Point(125, 559);
-            eMIS_NumberLabel.Name = "eMIS_NumberLabel";
-            eMIS_NumberLabel.Size = new System.Drawing.Size(113, 20);
-            eMIS_NumberLabel.TabIndex = 31;
-            eMIS_NumberLabel.Text = "EMIS Number:";
             // 
             // eMIS_NumberTextBox
             // 
             this.eMIS_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "EMIS Number", true));
-            this.eMIS_NumberTextBox.Location = new System.Drawing.Point(292, 556);
+            this.eMIS_NumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eMIS_NumberTextBox.Location = new System.Drawing.Point(1047, 568);
             this.eMIS_NumberTextBox.Name = "eMIS_NumberTextBox";
-            this.eMIS_NumberTextBox.Size = new System.Drawing.Size(100, 26);
+            this.eMIS_NumberTextBox.Size = new System.Drawing.Size(292, 39);
             this.eMIS_NumberTextBox.TabIndex = 32;
-            // 
-            // gP_Appointment_RefLabel
-            // 
-            gP_Appointment_RefLabel.AutoSize = true;
-            gP_Appointment_RefLabel.Location = new System.Drawing.Point(125, 591);
-            gP_Appointment_RefLabel.Name = "gP_Appointment_RefLabel";
-            gP_Appointment_RefLabel.Size = new System.Drawing.Size(161, 20);
-            gP_Appointment_RefLabel.TabIndex = 33;
-            gP_Appointment_RefLabel.Text = "GP Appointment Ref:";
             // 
             // gP_Appointment_RefTextBox
             // 
             this.gP_Appointment_RefTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "GP Appointment Ref", true));
-            this.gP_Appointment_RefTextBox.Location = new System.Drawing.Point(292, 588);
+            this.gP_Appointment_RefTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gP_Appointment_RefTextBox.Location = new System.Drawing.Point(1047, 637);
             this.gP_Appointment_RefTextBox.Name = "gP_Appointment_RefTextBox";
-            this.gP_Appointment_RefTextBox.Size = new System.Drawing.Size(100, 26);
+            this.gP_Appointment_RefTextBox.Size = new System.Drawing.Size(292, 39);
             this.gP_Appointment_RefTextBox.TabIndex = 34;
+            // 
+            // gP_AppointmentBindingSource
+            // 
+            this.gP_AppointmentBindingSource.DataMember = "GP Appointment";
+            this.gP_AppointmentBindingSource.DataSource = this.pharmacyDataSet;
+            // 
+            // gP_AppointmentTableAdapter
+            // 
+            this.gP_AppointmentTableAdapter.ClearBeforeFill = true;
+            // 
+            // gP_AppointmentDataGridView
+            // 
+            this.gP_AppointmentDataGridView.AutoGenerateColumns = false;
+            this.gP_AppointmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gP_AppointmentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.gP_AppointmentDataGridView.DataSource = this.gP_AppointmentBindingSource;
+            this.gP_AppointmentDataGridView.Location = new System.Drawing.Point(24, 841);
+            this.gP_AppointmentDataGridView.Name = "gP_AppointmentDataGridView";
+            this.gP_AppointmentDataGridView.RowHeadersWidth = 62;
+            this.gP_AppointmentDataGridView.RowTemplate.Height = 28;
+            this.gP_AppointmentDataGridView.Size = new System.Drawing.Size(1266, 399);
+            this.gP_AppointmentDataGridView.TabIndex = 35;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "GP Appointment Ref";
+            this.dataGridViewTextBoxColumn1.HeaderText = "GP Appointment Ref";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Patient NHS Number";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Patient NHS Number";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "EMIS Number";
+            this.dataGridViewTextBoxColumn3.HeaderText = "EMIS Number";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "GP Appointment";
+            this.dataGridViewTextBoxColumn4.HeaderText = "GP Appointment";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Patient Full Name";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Patient Full Name";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Patient ID";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Patient ID";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Medical Centre Name";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Medical Centre Name";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Doctor\'s NHS No";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Doctor\'s NHS No";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 150;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.bntExitPat);
+            this.panel1.Controls.Add(this.bntClosePat);
+            this.panel1.Controls.Add(this.bntSavePat);
+            this.panel1.Controls.Add(this.bntPreviousPat);
+            this.panel1.Controls.Add(this.bntNextPat);
+            this.panel1.Controls.Add(this.bntDeletePat);
+            this.panel1.Controls.Add(this.bntAddPat);
+            this.panel1.Location = new System.Drawing.Point(24, 723);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1325, 100);
+            this.panel1.TabIndex = 36;
+            // 
+            // bntExitPat
+            // 
+            this.bntExitPat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntExitPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntExitPat.Location = new System.Drawing.Point(1150, 15);
+            this.bntExitPat.Name = "bntExitPat";
+            this.bntExitPat.Size = new System.Drawing.Size(161, 66);
+            this.bntExitPat.TabIndex = 13;
+            this.bntExitPat.Text = "Exit";
+            this.bntExitPat.UseVisualStyleBackColor = true;
+            this.bntExitPat.Click += new System.EventHandler(this.bntExitPat_Click);
+            // 
+            // bntClosePat
+            // 
+            this.bntClosePat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntClosePat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntClosePat.Location = new System.Drawing.Point(966, 15);
+            this.bntClosePat.Name = "bntClosePat";
+            this.bntClosePat.Size = new System.Drawing.Size(161, 66);
+            this.bntClosePat.TabIndex = 12;
+            this.bntClosePat.Text = "Close";
+            this.bntClosePat.UseVisualStyleBackColor = true;
+            this.bntClosePat.Click += new System.EventHandler(this.bntClosePat_Click);
+            // 
+            // bntSavePat
+            // 
+            this.bntSavePat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntSavePat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntSavePat.Location = new System.Drawing.Point(780, 15);
+            this.bntSavePat.Name = "bntSavePat";
+            this.bntSavePat.Size = new System.Drawing.Size(161, 66);
+            this.bntSavePat.TabIndex = 12;
+            this.bntSavePat.Text = "Save";
+            this.bntSavePat.UseVisualStyleBackColor = true;
+            this.bntSavePat.Click += new System.EventHandler(this.bntSavePat_Click);
+            // 
+            // bntPreviousPat
+            // 
+            this.bntPreviousPat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntPreviousPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntPreviousPat.Location = new System.Drawing.Point(588, 15);
+            this.bntPreviousPat.Name = "bntPreviousPat";
+            this.bntPreviousPat.Size = new System.Drawing.Size(161, 66);
+            this.bntPreviousPat.TabIndex = 12;
+            this.bntPreviousPat.Text = "Previous";
+            this.bntPreviousPat.UseVisualStyleBackColor = true;
+            this.bntPreviousPat.Click += new System.EventHandler(this.bntPreviousPat_Click);
+            // 
+            // bntNextPat
+            // 
+            this.bntNextPat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntNextPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntNextPat.Location = new System.Drawing.Point(398, 15);
+            this.bntNextPat.Name = "bntNextPat";
+            this.bntNextPat.Size = new System.Drawing.Size(161, 66);
+            this.bntNextPat.TabIndex = 12;
+            this.bntNextPat.Text = "Next";
+            this.bntNextPat.UseVisualStyleBackColor = true;
+            this.bntNextPat.Click += new System.EventHandler(this.bntNextPat_Click);
+            // 
+            // bntDeletePat
+            // 
+            this.bntDeletePat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntDeletePat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntDeletePat.Location = new System.Drawing.Point(209, 15);
+            this.bntDeletePat.Name = "bntDeletePat";
+            this.bntDeletePat.Size = new System.Drawing.Size(161, 66);
+            this.bntDeletePat.TabIndex = 12;
+            this.bntDeletePat.Text = "Delete";
+            this.bntDeletePat.UseVisualStyleBackColor = true;
+            this.bntDeletePat.Click += new System.EventHandler(this.bntDeletePat_Click);
+            // 
+            // bntAddPat
+            // 
+            this.bntAddPat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntAddPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntAddPat.Location = new System.Drawing.Point(21, 15);
+            this.bntAddPat.Name = "bntAddPat";
+            this.bntAddPat.Size = new System.Drawing.Size(161, 66);
+            this.bntAddPat.TabIndex = 12;
+            this.bntAddPat.Text = "Add";
+            this.bntAddPat.UseVisualStyleBackColor = true;
+            this.bntAddPat.Click += new System.EventHandler(this.bntAddPat_Click);
             // 
             // Patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 765);
+            this.ClientSize = new System.Drawing.Size(1386, 1252);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.gP_AppointmentDataGridView);
             this.Controls.Add(nI_NumberLabel);
             this.Controls.Add(this.nI_NumberTextBox);
             this.Controls.Add(firstnameLabel);
@@ -591,6 +844,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingNavigator)).EndInit();
             this.patientBindingNavigator.ResumeLayout(false);
             this.patientBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gP_AppointmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gP_AppointmentDataGridView)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -632,5 +888,24 @@
         private System.Windows.Forms.TextBox patient_NHS_NumberTextBox;
         private System.Windows.Forms.TextBox eMIS_NumberTextBox;
         private System.Windows.Forms.TextBox gP_Appointment_RefTextBox;
+        private System.Windows.Forms.BindingSource gP_AppointmentBindingSource;
+        private PharmacyDataSetTableAdapters.GP_AppointmentTableAdapter gP_AppointmentTableAdapter;
+        private System.Windows.Forms.DataGridView gP_AppointmentDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button bntExitPat;
+        private System.Windows.Forms.Button bntClosePat;
+        private System.Windows.Forms.Button bntSavePat;
+        private System.Windows.Forms.Button bntPreviousPat;
+        private System.Windows.Forms.Button bntNextPat;
+        private System.Windows.Forms.Button bntDeletePat;
+        private System.Windows.Forms.Button bntAddPat;
     }
 }

@@ -60,7 +60,7 @@
             // 
             this.bntDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntDoctor.Location = new System.Drawing.Point(64, 286);
+            this.bntDoctor.Location = new System.Drawing.Point(149, 288);
             this.bntDoctor.Name = "bntDoctor";
             this.bntDoctor.Size = new System.Drawing.Size(281, 66);
             this.bntDoctor.TabIndex = 0;
@@ -72,7 +72,7 @@
             // 
             this.bntGP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntGP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntGP.Location = new System.Drawing.Point(64, 401);
+            this.bntGP.Location = new System.Drawing.Point(149, 403);
             this.bntGP.Name = "bntGP";
             this.bntGP.Size = new System.Drawing.Size(281, 66);
             this.bntGP.TabIndex = 1;
@@ -84,7 +84,7 @@
             // 
             this.bntPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntPatient.Location = new System.Drawing.Point(64, 517);
+            this.bntPatient.Location = new System.Drawing.Point(149, 519);
             this.bntPatient.Name = "bntPatient";
             this.bntPatient.Size = new System.Drawing.Size(281, 66);
             this.bntPatient.TabIndex = 1;
@@ -96,7 +96,7 @@
             // 
             this.bntPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntPayment.Location = new System.Drawing.Point(64, 632);
+            this.bntPayment.Location = new System.Drawing.Point(149, 634);
             this.bntPayment.Name = "bntPayment";
             this.bntPayment.Size = new System.Drawing.Size(281, 66);
             this.bntPayment.TabIndex = 1;
@@ -108,7 +108,7 @@
             // 
             this.bntPharmacy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntPharmacy.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntPharmacy.Location = new System.Drawing.Point(64, 745);
+            this.bntPharmacy.Location = new System.Drawing.Point(149, 747);
             this.bntPharmacy.Name = "bntPharmacy";
             this.bntPharmacy.Size = new System.Drawing.Size(281, 66);
             this.bntPharmacy.TabIndex = 1;
@@ -120,7 +120,7 @@
             // 
             this.bntOffice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntOffice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntOffice.Location = new System.Drawing.Point(64, 861);
+            this.bntOffice.Location = new System.Drawing.Point(149, 863);
             this.bntOffice.Name = "bntOffice";
             this.bntOffice.Size = new System.Drawing.Size(281, 66);
             this.bntOffice.TabIndex = 1;
@@ -132,7 +132,7 @@
             // 
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(64, 973);
+            this.button7.Location = new System.Drawing.Point(149, 975);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(281, 66);
             this.button7.TabIndex = 1;
@@ -149,7 +149,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.txtUsername);
-            this.panel1.Location = new System.Drawing.Point(446, 321);
+            this.panel1.Location = new System.Drawing.Point(531, 323);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 606);
             this.panel1.TabIndex = 2;
@@ -204,7 +204,7 @@
             this.txtPassword.Location = new System.Drawing.Point(459, 217);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PasswordChar = '●';
             this.txtPassword.Size = new System.Drawing.Size(436, 62);
             this.txtPassword.TabIndex = 0;
             // 
@@ -221,7 +221,7 @@
             // 
             this.bntHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntHelp.Location = new System.Drawing.Point(1532, 973);
+            this.bntHelp.Location = new System.Drawing.Point(1617, 975);
             this.bntHelp.Name = "bntHelp";
             this.bntHelp.Size = new System.Drawing.Size(281, 66);
             this.bntHelp.TabIndex = 4;
@@ -232,7 +232,7 @@
             // 
             this.bntPF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntPF.Location = new System.Drawing.Point(1532, 861);
+            this.bntPF.Location = new System.Drawing.Point(1617, 863);
             this.bntPF.Name = "bntPF";
             this.bntPF.Size = new System.Drawing.Size(281, 66);
             this.bntPF.TabIndex = 5;
@@ -243,7 +243,7 @@
             // 
             this.bntPharmacist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntPharmacist.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntPharmacist.Location = new System.Drawing.Point(1532, 745);
+            this.bntPharmacist.Location = new System.Drawing.Point(1617, 747);
             this.bntPharmacist.Name = "bntPharmacist";
             this.bntPharmacist.Size = new System.Drawing.Size(281, 66);
             this.bntPharmacist.TabIndex = 6;
@@ -254,7 +254,7 @@
             // 
             this.bntConsultant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntConsultant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntConsultant.Location = new System.Drawing.Point(1532, 632);
+            this.bntConsultant.Location = new System.Drawing.Point(1617, 634);
             this.bntConsultant.Name = "bntConsultant";
             this.bntConsultant.Size = new System.Drawing.Size(281, 66);
             this.bntConsultant.TabIndex = 7;
@@ -265,7 +265,7 @@
             // 
             this.bntSpecialist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntSpecialist.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntSpecialist.Location = new System.Drawing.Point(1532, 517);
+            this.bntSpecialist.Location = new System.Drawing.Point(1617, 519);
             this.bntSpecialist.Name = "bntSpecialist";
             this.bntSpecialist.Size = new System.Drawing.Size(281, 66);
             this.bntSpecialist.TabIndex = 8;
@@ -276,7 +276,7 @@
             // 
             this.bntHostital.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntHostital.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntHostital.Location = new System.Drawing.Point(1532, 401);
+            this.bntHostital.Location = new System.Drawing.Point(1617, 403);
             this.bntHostital.Name = "bntHostital";
             this.bntHostital.Size = new System.Drawing.Size(281, 66);
             this.bntHostital.TabIndex = 9;
@@ -287,7 +287,7 @@
             // 
             this.bntSurgery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntSurgery.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntSurgery.Location = new System.Drawing.Point(1532, 286);
+            this.bntSurgery.Location = new System.Drawing.Point(1617, 288);
             this.bntSurgery.Name = "bntSurgery";
             this.bntSurgery.Size = new System.Drawing.Size(281, 66);
             this.bntSurgery.TabIndex = 3;
@@ -298,7 +298,7 @@
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(64, 86);
+            this.panel2.Location = new System.Drawing.Point(149, 88);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1749, 120);
             this.panel2.TabIndex = 10;
@@ -317,7 +317,7 @@
             // 
             this.bntClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntClose.Location = new System.Drawing.Point(843, 973);
+            this.bntClose.Location = new System.Drawing.Point(928, 975);
             this.bntClose.Name = "bntClose";
             this.bntClose.Size = new System.Drawing.Size(281, 66);
             this.bntClose.TabIndex = 11;
@@ -329,7 +329,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2061, 1365);
+            this.ClientSize = new System.Drawing.Size(2061, 1202);
             this.Controls.Add(this.bntClose);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.bntHelp);
